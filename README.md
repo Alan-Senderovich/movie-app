@@ -1,5 +1,5 @@
 # Movie APP CHALLENGE
--Github code: 
+-Github code: https://github.com/Alan-Senderovich/movie-app
 
 This is a Movies application developed as part of a technical challenge. The application allows you to search for movies by category and also display the details of each movie.
 
@@ -11,7 +11,7 @@ This is a Movies application developed as part of a technical challenge. The app
 
 1. Clone this repository to your local machine:
 
-https://github.com/Alan-Senderovich/
+https://github.com/Alan-Senderovich/movie-app
 
 2. Navigate to the project directory: <cd movie-app>
 

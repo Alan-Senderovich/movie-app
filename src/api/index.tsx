@@ -2,34 +2,33 @@ import { IMovieCard } from "@/interfaces";
 
 async function fetchAndCacheData(type: string, page: number) {
   try {
-    // Realizar la solicitud a la API
+    // Make a request to the API
     const response = await fetch(
-      // `https://api.themoviedb.org/3/movie/${type}?api_key=4f298a53e552283bee957836a529baec&language=en-US&page=${page}`
       `https://api.themoviedb.org/3/movie/${type}?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US&page=${page}`
     );
     const data = await response.json();
 
-    // Almacenar los datos en la caché del navegador
+    // Store the data in the browser's cache
     localStorage.setItem(`${type}_${page}`, JSON.stringify(data));
 
-    // Retornar los datos para su uso en la aplicación
+    // Return the data for use in the application
     return data;
   } catch (error) {
-    console.error('Error al obtener los datos de la API:', error);
+    console.error('Error fetching data from API:', error);
     throw error;
   }
 }
 
-// Función para obtener los datos desde la caché o realizar una solicitud a la API
+// Function to get data from cache or make a request to the API
 export async function getMovies(type: string, page: number) {
-  // Verificar si los datos están almacenados en la caché
+  // Check if the data is stored in the cache
   const cachedData = localStorage.getItem(`${type}_${page}`);
 
   if (cachedData) {
-    // Si los datos están en la caché, devolverlos para su uso en la aplicación
+    // If the data is in the cache, return it for use in the application
     return JSON.parse(cachedData);
   } else {
-    // Si los datos no están en la caché, realizar una solicitud a la API y almacenarlos en la caché
+    // If the data is not in the cache, make a request to the API and store it in the cache
     return fetchAndCacheData(type, page);
   }
 }
