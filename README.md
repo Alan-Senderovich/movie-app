@@ -1,3 +1,35 @@
+# Movie APP CHALLENGE
+-Github code: 
+
+This is a Movies application developed as part of a technical challenge. The application allows you to search for movies by category and also display the details of each movie.
+
+## Prerequisites
+
+- Node.js: Make sure you have Node.js installed on your machine.
+
+## Project Setup
+
+1. Clone this repository to your local machine:
+
+https://github.com/Alan-Senderovich/
+
+2. Navigate to the project directory: <cd movie-app>
+
+3. Install the project dependencies: <npm install>
+
+
+## Running the Project
+
+1. Start the development server:
+npm run dev
+
+This will start the application and you can access it in your browser at http://localhost:3000.
+
+Feel free to explore the application and use its features.
+
+//////////////////////////////////////////////////////////////////////////////////
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
